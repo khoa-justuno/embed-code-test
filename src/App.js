@@ -5,7 +5,6 @@ import SignUp from './SignUp'
 import SignIn from './SignIn'
 import Privacy from './Privacy'
 import Terms from './Terms'
-import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
