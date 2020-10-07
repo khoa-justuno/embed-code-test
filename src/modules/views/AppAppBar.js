@@ -42,7 +42,7 @@ function AppAppBar(props) {
 
   return (
     <div>
-      <AppBar position="fixed">
+      <AppBar>
         <Toolbar className={classes.toolbar}>
           <div className={classes.left} />
           <MuiLink
@@ -78,7 +78,7 @@ function AppAppBar(props) {
           </div>
         </Toolbar>
       </AppBar>
-      <div className={classes.placeholder} />
+      {/* <div className={classes.placeholder} /> */}
     </div>
   );
 }
