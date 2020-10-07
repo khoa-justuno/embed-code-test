@@ -5,6 +5,7 @@ import SignUp from './SignUp'
 import SignIn from './SignIn'
 import Privacy from './Privacy'
 import Terms from './Terms'
+import ForgetPassword from './ForgotPassword'
 import "./App.css";
 
 class App extends Component {
@@ -27,6 +28,10 @@ class App extends Component {
           <Route path="/terms">
             <Terms />
           </Route>
+          <Route path="/forgot-password">
+            <ForgetPassword />
+          </Route>
+          
         </Switch>
       </Router>
     );

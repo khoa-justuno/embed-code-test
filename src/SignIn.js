@@ -3,7 +3,8 @@ import withRoot from './modules/withRoot';
 import React from 'react';
 import { Field, Form, FormSpy } from 'react-final-form';
 import { makeStyles } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
+import {Link} from 'react-router-dom'
+import MuiLink from '@material-ui/core/Link';
 import Typography from './modules/components/Typography';
 import AppFooter from './modules/views/AppFooter';
 import AppAppBar from './modules/views/AppAppBar';
@@ -57,9 +58,9 @@ function SignIn() {
           </Typography>
           <Typography variant="body2" align="center">
             {'Not a member yet? '}
-            <Link href="/premium-themes/onepirate/sign-up/" align="center" underline="always">
+            <MuiLink component={Link} to="/sign-up" align="center" underline="always">
               Sign Up here
-            </Link>
+            </MuiLink>
           </Typography>
         </React.Fragment>
         <Form onSubmit={handleSubmit} subscription={{ submitting: true }} validate={validate}>
@@ -111,9 +112,9 @@ function SignIn() {
           )}
         </Form>
         <Typography align="center">
-          <Link underline="always" href="/premium-themes/onepirate/forgot-password/">
+          <MuiLink underline="always" component={Link} to="/forgot-password">
             Forgot password?
-          </Link>
+          </MuiLink>
         </Typography>
       </AppForm>
       <AppFooter />
