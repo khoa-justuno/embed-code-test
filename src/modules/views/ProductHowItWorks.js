@@ -117,7 +117,7 @@ function ProductHowItWorks(props) {
           variant="contained"
           className={classes.button}
           component={Link}
-          href="/sign-up/"
+          to="/sign-up"
         >
           Get started
         </Button>
