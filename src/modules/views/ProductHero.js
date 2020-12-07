@@ -4,6 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
 import Typography from "../components/Typography";
+import Box from '@material-ui/core/Box';
 import ProductHeroLayout from "./ProductHeroLayout";
 
 const backgroundImage =
@@ -31,7 +32,7 @@ const styles = (theme) => ({
 });
 
 function ProductHero(props) {
-  const { classes } = props;
+  const { classes, setCount, count } = props;
 
   return (
     <ProductHeroLayout backgroundClassName={classes.background}>
@@ -65,6 +66,11 @@ function ProductHero(props) {
       <Typography variant="body2" color="inherit" className={classes.more}>
         Discover the experience
       </Typography>
+      <Box>
+        <Button onClick={() => setCount(count + 1)}>
+          Increment Cart Count
+        </Button>
+      </Box>
     </ProductHeroLayout>
   );
 }
